@@ -1,5 +1,6 @@
 APP PetPaws develop for Coding101.
-glimpse of our APP's UI
+
+A glimpse of our APP's UI:
 
 ![Alt text](screenshot/Group.png)
 
