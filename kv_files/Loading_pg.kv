@@ -1,0 +1,17 @@
+<Loading_pg>:
+	name: 'loading'
+	RelativeLayout:
+		canvas:
+			Color:
+				rgba: loading_color
+			Rectangle:
+				size: self.size
+				pos: self.pos
+	Image:
+		canvas:
+			Color:
+				rgba: 0, 0, 0, 
+		source: "drawable/loading_pg/loading_img.png"
+		pos_hint: {'center_x':.5, 'center_y':0.55}
+		allow_stretch: False
+		size_hint_x: 1

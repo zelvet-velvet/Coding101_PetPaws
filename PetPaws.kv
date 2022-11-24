@@ -1,0 +1,32 @@
+# import .kv files 
+#: include kv_files/Register_pg.kv
+#: include kv_files/Loading_pg.kv
+#: include kv_files/Logging_pg.kv
+
+# font path
+#:set font_bold "font/TaipeiSansTCBeta-Bold.ttf"
+#:set font_regular "font/TaipeiSansTCBeta-Regular.ttf"
+
+# screens' color rgba  
+#:set loading_color 252/255, 207/255, 207/255, 100/100
+#:set logging_color 255/255, 255/255, 255/255, 100/100
+#:set register_color 255/255, 255/255, 255/255, 100/100
+
+# buttons' color rgba
+#:set btn_pink 237/255, 132/255, 157/255, 100/100
+#:set btn_upperleft 62/255, 73/255, 88/255, 100/100
+
+
+#: import FadeTransition kivy.uix.screenmanager.FadeTransition
+ScreenManager:
+	transition: FadeTransition()
+	duration: .001
+	Loading_pg:
+	Logging_pg:
+	Register_pg:
+
+
+
+
+
+

@@ -1,0 +1,28 @@
+<Register_pg>:
+	name: 'register'
+	RelativeLayout:
+		canvas:
+			Color:
+				rgba: register_color
+			Rectangle:
+				size: self.size
+				pos: self.pos
+	
+		Button:
+			canvas.before:
+				Color:
+					rgba: 1, 1, 1, 1
+				RoundedRectangle:
+					radius: [10]
+					pos: self.pos
+					size: self.size
+			background_normal: 'drawable/none.png'
+			background_down: 'drawable/none.png'
+			text: '註冊'
+			color: btn_upperleft
+			font_size: 55
+			font_name: font_bold
+			size_hint: None, None
+			size: (160, 60)
+			pos_hint: {'center_x':.2, 'center_y':.9}
+	

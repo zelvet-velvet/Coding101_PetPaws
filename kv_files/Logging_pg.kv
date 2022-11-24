@@ -1,0 +1,135 @@
+<Logging_pg>:
+	name: 'logging'
+	RelativeLayout:
+		canvas:
+			Color:
+				rgba: logging_color
+			Rectangle:
+				size: self.size
+				pos: self.pos
+
+		Image:
+			source: "drawable/logging_pg/logging_icon.png"
+			pos_hint: {'center_x':.5, 'center_y':.63}
+			allow_stretch: False
+			size_hint_x: 0.65
+
+		Button:
+			canvas.before:
+				Color:
+					rgba: 1, 1, 1, 1
+				RoundedRectangle:
+					radius: [10]
+					pos: self.pos
+					size: self.size
+			background_normal: 'drawable/none.png'
+			background_down: 'drawable/none.png'
+			text: '登入'
+			color: btn_upperleft
+			font_size: 55
+			font_name: font_bold
+			size_hint: None, None
+			size: (160, 60)
+			pos_hint: {'center_x':.2, 'center_y':.9}
+		
+		Button:
+			canvas.before:
+				Color:
+					rgba: btn_pink
+				RoundedRectangle:
+					radius: [8]
+					pos: self.pos
+					size: self.size
+			background_normal: 'drawable/none.png'
+			background_down: 'drawable/none.png'
+			size_hint: None, None
+			size: (528.7, 83)
+			pos_hint: {'center_x':.5, 'center_y':.225}
+
+		Button:
+			canvas.before:
+				Color:
+					rgba: 1, 1, 1, 1
+				RoundedRectangle:
+					radius: [10]
+					pos: self.pos
+					size: self.size
+			background_normal: 'drawable/none.png'
+			background_down: 'drawable/none.png'
+			text: '忘記密碼？'
+			color: btn_upperleft
+			font_size: 25
+			font_name: font_bold
+			size_hint: None, None
+			size: (120, 35)
+			pos_hint: {'center_x':.2, 'center_y':.17}
+			
+		Button:
+			canvas.before:
+				Color:
+					rgba: 1, 1, 1, 1
+				RoundedRectangle:
+					radius: [10]
+					pos: self.pos
+					size: self.size
+			background_normal: 'drawable/none.png'
+			background_down: 'drawable/none.png'
+			text: '立即註冊'
+			color: btn_upperleft
+			font_size: 25
+			font_name: font_bold
+			size_hint: None, None
+			size: (120, 35)
+			pos_hint: {'center_x':.815, 'center_y':.17}
+
+		Label:
+			pos_hint: {'center_x':.5, 'center_y':.225}
+			markup: True
+			text: "下一步"
+			font_size: 30
+			font_name: font_regular
+			color: 1, 1, 1, 1
+
+		TextInput:
+			id: account_id
+			canvas.after:
+				Color:
+					rgba: 0, 0, 0, 1
+				Line:
+					width: 1.5
+					rectangle: account_id.center_x-(account_id.size[0]/2), account_id.center_y-(account_id.size[1]/2), account_id.size[0], account_id.size[1]
+			write_tab: False
+			background_normal: ""
+			multiline: False
+			size_hint: None, None
+			size: (528.7, 83)
+			pos_hint: {'center_x': 0.5, 'center_y': 0.385}
+			#font setting
+			hint_text:'電子郵件'
+			hint_text_color: 0, 0, 0, 0.5
+			font_size: 25
+			font_name: font_regular
+			padding: [20, self.height / 2.0 - (self.line_height / 2.0) * len(self._lines), 0, 0]
+			#on_text: 
+
+		TextInput:
+			id: password_id
+			canvas.after:
+				Color:
+					rgba: 0, 0, 0, 1
+				Line:
+					width: 1.5
+					rectangle: password_id.center_x-(password_id.size[0]/2), password_id.center_y-(password_id.size[1]/2), password_id.size[0], password_id.size[1]
+			write_tab: False
+			background_normal: ""
+			multiline: False
+			size_hint: None, None
+			size: (528.7, 83)
+			pos_hint: {'center_x': 0.5, 'center_y': 0.305}
+			#font setting
+			hint_text:'密碼'
+			hint_text_color: 0, 0, 0, 0.5
+			font_size: 25
+			font_name: font_regular
+			padding: [20, self.height / 2.0 - (self.line_height / 2.0) * len(self._lines), 0, 0]
+			#on_text: 
