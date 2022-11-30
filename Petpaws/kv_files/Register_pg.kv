@@ -8,6 +8,7 @@
 				size: self.size
 				pos: self.pos
 	
+# back btn ------------------------------------------------------------
 		Button:
 			canvas.before:
 				Color:
@@ -20,9 +21,206 @@
 			background_down: 'drawable/none.png'
 			text: '註冊'
 			color: btn_upperleft
-			font_size: 55
+			font_size: 58
 			font_name: font_bold
 			size_hint: None, None
 			size: (160, 60)
-			pos_hint: {'center_x':.2, 'center_y':.9}
+			pos_hint: {'center_x':.26, 'center_y':.9}
 	
+		Button:
+			background_normal: 'drawable/function_btn/back.png'
+			background_down: 'drawable/function_btn/back.png'
+			pos_hint: {'center_x':.11, 'center_y':.9}
+			allow_stretch: False
+			size: 60, 60
+			size_hint: None, None	
+# input text username ------------------------------------------------------------
+		
+		Label:
+			pos_hint: {'center_x':.15, 'center_y':.81}
+			markup: True
+			text: "用戶名"
+			font_size: 23
+			font_name: font_regular
+			color: btn_upperleft
+
+		Label:
+			canvas:
+				Color:
+					rgba: input_background
+				RoundedRectangle:
+					radius: [23]
+					pos: self.pos
+					size: self.size
+			canvas.before:
+				Color:
+					rgba: background_txt
+				RoundedRectangle:
+					radius: [23]
+					pos: self.pos
+					size: (530, 106.3)
+			background_normal: 'drawable/none.png'
+			background_down: 'drawable/none.png'
+			pos_hint: {'center_x': .5, 'center_y': .75}
+			size: (528.7, 105)
+			size_hint: None, None
+
+		TextInput:
+			id: username_id
+			write_tab: False
+			multiline: False
+			background_normal: ""
+			background_active: ""
+			size_hint: None, None
+			size: (528.7, 83)
+			pos_hint: {'center_x': 0.5, 'center_y': 0.75}
+			#font setting
+			hint_text:'John Adam'
+			hint_text_color: background_txt
+			font_size: 25
+			font_name: font_regular
+			padding: [40, self.height / 2.0 - (self.line_height / 2.0) * len(self._lines), 0, 0]
+			background_color: 0,0,0,0
+			#on_text:	
+# input text mail ------------------------------------------------------------
+
+		Label:
+			pos_hint: {'center_x':.15, 'center_y':.68}
+			markup: True
+			text: "電子郵件"
+			font_size: 23
+			font_name: font_regular
+			color: btn_upperleft
+
+		Label:
+			canvas:
+				Color:
+					rgba: input_background
+				RoundedRectangle:
+					radius: [23]
+					pos: self.pos
+					size: self.size
+			canvas.before:
+				Color:
+					rgba: background_txt
+				RoundedRectangle:
+					radius: [23]
+					pos: self.pos
+					size: (530, 106.3)
+			background_normal: 'drawable/none.png'
+			background_down: 'drawable/none.png'
+			pos_hint: {'center_x': 0.5, 'center_y': 0.625}
+			size: (528.7, 105)
+			size_hint: None, None
+
+		TextInput:
+			id: newmail_id
+			write_tab: False
+			multiline: False
+			background_normal: ""
+			background_active: ""
+			size_hint: None, None
+			size: (528.7, 83)
+			pos_hint: {'center_x': 0.5, 'center_y': 0.625}
+			#font setting
+			hint_text:'JohnAdam@gmail.com'
+			hint_text_color: background_txt
+			font_size: 25
+			font_name: font_regular
+			padding: [40, self.height / 2.0 - (self.line_height / 2.0) * len(self._lines), 0, 0]
+			background_color: 0,0,0,0
+			#on_text: 
+# input text password ------------------------------------------------------------
+
+		Label:
+			pos_hint: {'center_x':.15, 'center_y':.56}
+			markup: True
+			text: "電子郵件"
+			font_size: 23
+			font_name: font_regular
+			color: btn_upperleft
+
+		Label:
+			canvas:
+				Color:
+					rgba: input_background
+				RoundedRectangle:
+					radius: [23]
+					pos: self.pos
+					size: self.size
+			canvas.before:
+				Color:
+					rgba: background_txt
+				RoundedRectangle:
+					radius: [23]
+					pos: self.pos
+					size: (530, 106.3)
+			background_normal: 'drawable/none.png'
+			background_down: 'drawable/none.png'
+			pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+			size: (528.7, 105)
+			size_hint: None, None
+
+		TextInput:
+			id: newpassword_id
+			write_tab: False
+			multiline: False
+			password: True
+			background_normal: ""
+			background_active: ""
+			size_hint: None, None
+			size: (528.7, 83)
+			pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+			#font setting
+			hint_text:'*********** (at least 8 char)'
+			hint_text_color: background_txt
+			font_size: 25
+			font_name: font_regular
+			padding: [40, self.height / 2.0 - (self.line_height / 2.0) * len(self._lines), 0, 0]
+			background_color: 0,0,0,0
+			#on_text: 
+# button register ------------------------------------------------------------
+
+		Button:
+			canvas.before:
+				Color:
+					rgba: btn_pink
+				RoundedRectangle:
+					radius: [20]
+					pos: self.pos
+					size: self.size
+			background_normal: 'drawable/none.png'
+			background_down: 'drawable/none.png'
+			size_hint: None, None
+			size: (528.7, 100)
+			pos_hint: {'center_x':.5, 'center_y':.375}
+
+		Label:
+			pos_hint: {'center_x':.5, 'center_y':.375}
+			markup: True
+			text: "註冊"
+			font_size: 30
+			font_name: font_regular
+			color: 1, 1, 1, 1
+# split line  ------------------------------------------------------------
+		
+		Label:
+			canvas.before:
+				Color:
+					rgba: background_txt
+				Line:
+					width: 1.5
+					points: 50,screen_h*.27,200,screen_h*.27
+			canvas:
+				Color:
+					rgba: background_txt
+				Line:
+					width: 1.5
+					points: 442,screen_h*.27,592,screen_h*.27
+			pos_hint: {'center_x':.5, 'center_y': .27}
+			markup: True
+			text: "Or sign up with"
+			font_size: 25
+			font_name: font_bold
+			color: btn_upperleft
+#   ------------------------------------------------------------
