@@ -46,10 +46,15 @@ class Register_pg(Screen):
 	def __init__(self,  **kwargs):
 		super(Register_pg, self).__init__(**kwargs)
 
-	"""
-class (Screen):
-	pass
-	"""
+class Howtorepwd_pg(Screen):
+	def __init__(self,  **kwargs):
+		super(Howtorepwd_pg, self).__init__(**kwargs)
+
+class Repwd_pg(Screen):
+	def __init__(self,  **kwargs):
+		super(Repwd_pg, self).__init__(**kwargs)
+
+
 class ScreenManager(ScreenManager):
 	pass
 
