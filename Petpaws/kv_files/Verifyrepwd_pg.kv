@@ -1,0 +1,223 @@
+<Verifyrepwd_pg>:
+	name: 'verrifyrepwd'
+	RelativeLayout:
+		canvas:
+			Color:
+				rgba: verifyrepwd_color
+			Rectangle:
+				size: self.size
+				pos: self.pos
+
+		Button:
+			canvas.before:
+				Color:
+					rgba: 1, 1, 1, 1
+				RoundedRectangle:
+					radius: [10]
+					pos: self.pos
+					size: self.size
+			background_normal: 'drawable/none.png'
+			background_down: 'drawable/none.png'
+			text: '恢復密碼'
+			color: btn_upperleft
+			font_size: 58
+			font_name: font_bold
+			size_hint: None, None
+			size: (160, 60)
+			pos_hint: {'center_x':.38, 'center_y':.9}
+	
+		Button:
+			background_normal: 'drawable/function_btn/back.png'
+			background_down: 'drawable/function_btn/back.png'
+			pos_hint: {'center_x':.11, 'center_y':.9}
+			allow_stretch: False
+			size: 60, 60
+			size_hint: None, None
+			
+		Label:
+			pos_hint: {'center_x':.4, 'center_y':.825}
+			markup: True
+			text: "恢復代碼已發送到您的短訊中。\n代碼過期時間為 120s。"
+			font_size: 25
+			font_name: font_regular
+			color: btn_upperleft
+
+#:set verifyNum_y_ .64	
+# input text verify number char 1 -------------------------------------	
+
+		Label:
+			pos_hint: {'center_x':.2, 'center_y': verifyNum_y_ +.07}
+			markup: True
+			text: "請輸入代碼："
+			font_size: 23
+			font_name: font_regular
+			color: btn_upperleft	
+		Label:
+			canvas:
+				Color:
+					rgba: input_background
+				RoundedRectangle:
+					radius: [23]
+					pos: self.pos
+					size: self.size
+			canvas.before:
+				Color:
+					rgba: background_txt
+				RoundedRectangle:
+					radius: [23]
+					pos: self.pos
+					size: (107, 107)
+			background_normal: 'drawable/none.png'
+			background_down: 'drawable/none.png'
+			pos_hint: {'center_x': .165, 'center_y': verifyNum_y_}
+			size: (105, 105)
+			size_hint: None, None
+
+		TextInput:
+			id: verifyNum1_id
+			write_tab: False
+			multiline: False
+			background_normal: ""
+			background_active: ""
+			size_hint: None, None
+			font_size: 60
+			font_color: background_txt
+			size: (105, 105)
+			pos_hint: {'center_x': .165, 'center_y': verifyNum_y_}
+			padding: [40, self.height / 2.0 - (self.line_height / 2.0) * len(self._lines), 0, 0]
+			background_color: 0,0,0,0
+			#on_text:
+# input text verify number char 2 -------------------------------------		
+		Label:
+			canvas:
+				Color:
+					rgba: input_background
+				RoundedRectangle:
+					radius: [23]
+					pos: self.pos
+					size: self.size
+			canvas.before:
+				Color:
+					rgba: background_txt
+				RoundedRectangle:
+					radius: [23]
+					pos: self.pos
+					size: (107, 107)
+			background_normal: 'drawable/none.png'
+			background_down: 'drawable/none.png'
+			pos_hint: {'center_x': .388, 'center_y': verifyNum_y_}
+			size: (105, 105)
+			size_hint: None, None
+
+		TextInput:
+			id: verifyNum2_id
+			write_tab: False
+			multiline: False
+			background_normal: ""
+			background_active: ""
+			size_hint: None, None
+			font_size: 60
+			font_color: background_txt
+			size: (105, 105)
+			pos_hint: {'center_x': .388, 'center_y': verifyNum_y_}
+			padding: [40, self.height / 2.0 - (self.line_height / 2.0) * len(self._lines), 0, 0]
+			background_color: 0,0,0,0
+			#on_text:
+# input text verify number char 3 -------------------------------------		
+		Label:
+			canvas:
+				Color:
+					rgba: input_background
+				RoundedRectangle:
+					radius: [23]
+					pos: self.pos
+					size: self.size
+			canvas.before:
+				Color:
+					rgba: background_txt
+				RoundedRectangle:
+					radius: [23]
+					pos: self.pos
+					size: (107, 107)
+			background_normal: 'drawable/none.png'
+			background_down: 'drawable/none.png'
+			pos_hint: {'center_x': .611, 'center_y': verifyNum_y_}
+			size: (105, 105)
+			size_hint: None, None
+
+		TextInput:
+			id: verifyNum3_id
+			write_tab: False
+			multiline: False
+			background_normal: ""
+			background_active: ""
+			size_hint: None, None
+			font_size: 60
+			font_color: background_txt
+			size: (105, 105)
+			pos_hint: {'center_x': .611, 'center_y': verifyNum_y_}
+			padding: [40, self.height / 2.0 - (self.line_height / 2.0) * len(self._lines), 0, 0]
+			background_color: 0,0,0,0
+			#on_text:
+# input text verify number char 4 -------------------------------------		
+		Label:
+			canvas:
+				Color:
+					rgba: input_background
+				RoundedRectangle:
+					radius: [23]
+					pos: self.pos
+					size: self.size
+			canvas.before:
+				Color:
+					rgba: background_txt
+				RoundedRectangle:
+					radius: [23]
+					pos: self.pos
+					size: (107, 107)
+			background_normal: 'drawable/none.png'
+			background_down: 'drawable/none.png'
+			pos_hint: {'center_x': .835, 'center_y': verifyNum_y_}
+			size: (105, 105)
+			size_hint: None, None
+
+		TextInput:
+			id: verifyNum4_id
+			write_tab: False
+			multiline: False
+			background_normal: ""
+			background_active: ""
+			size_hint: None, None
+			font_size: 60
+			font_color: background_txt
+			size: (105, 105)
+			pos_hint: {'center_x': .835, 'center_y': verifyNum_y_}
+			padding: [40, self.height / 2.0 - (self.line_height / 2.0) * len(self._lines), 0, 0]
+			background_color: 0,0,0,0
+			#on_text:
+
+# button enter ------------------------------------------------------------
+
+		Button:
+			id: repwd_btn
+			canvas.before:
+				Color:
+					rgba: btn_pink
+				RoundedRectangle:
+					radius: [20]
+					pos: self.pos
+					size: self.size
+			background_normal: 'drawable/none.png'
+			background_down: 'drawable/none.png'
+			size_hint: None, None
+			size: (528.7, 100)
+			pos_hint: {'center_x':.5, 'center_y':.375}
+
+		Label:
+			pos_hint: {'center_x':.5, 'center_y':.375}
+			markup: True
+			text: "完成"
+			font_size: 30
+			font_name: font_bold
+			color: 1, 1, 1, 1
+		
