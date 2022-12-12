@@ -1,0 +1,56 @@
+<Successrepwd_pg>:
+	name: 'successrepwd'
+	RelativeLayout:
+		canvas:
+			Color:
+				rgba: successrepwd_color
+			Rectangle:
+				size: self.size
+				pos: self.pos
+
+		Image:
+			source: "drawable/successrepwd_pg/sucessrepwd_icon.png"
+			pos_hint: {'center_x':.48, 'center_y':.6}
+			allow_stretch: False
+			size_hint_x: 0.5
+
+		Label:
+			pos_hint: {'center_x':.5, 'center_y':.465}
+			markup: True
+			text: "重設密碼\n    成功！"
+			halign: "center"
+			font_size: 40
+			font_name: font_bold
+			color: btn_upperleft
+
+		Label:
+			pos_hint: {'center_x':.5, 'center_y':.4}
+			markup: True
+			text: "您已成功重置您的密碼\n請使用您的新密碼登錄"
+			halign: "center"
+			font_size: 22
+			font_name: font_regular
+			color: btn_upperleft
+# button enter ------------------------------------------------------------
+
+		Button:
+			canvas.before:
+				Color:
+					rgba: btn_pink
+				RoundedRectangle:
+					radius: [20]
+					pos: self.pos
+					size: self.size
+			background_normal: 'drawable/none.png'
+			background_down: 'drawable/none.png'
+			size_hint: None, None
+			size: (528.7, 100)
+			pos_hint: {'center_x':.5, 'center_y':.2}
+
+		Label:
+			pos_hint: {'center_x':.5, 'center_y':.2}
+			markup: True
+			text: "完成"
+			font_size: 30
+			font_name: font_bold
+			color: 1, 1, 1, 1
