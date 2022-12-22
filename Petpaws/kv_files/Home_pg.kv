@@ -1,0 +1,103 @@
+<Home_pg>:
+	name: 'home'
+	RelativeLayout:
+		canvas:
+			Color:
+				rgba: home_color
+			Rectangle:
+				size: self.size
+				pos: self.pos
+# ceiling image --------------------------------------------------------
+		
+		Image:
+			source: "drawable/home_pg/ceiling.png"
+			pos_hint: {'center_x':.5, 'center_y':.91}
+			size: (642, 114)
+			size_hint: None, None
+
+		Image:
+			source: "drawable/home_pg/petpaws_txt.png"
+			pos_hint: {'center_x':.5, 'center_y':.91}
+			allow_stretch: False
+			size_hint_x: 1
+# search input text --------------------------------------------------------
+	
+		#:set chckpwd_y .81
+		Label:
+			canvas:
+				Color:
+					rgba: input_background
+				RoundedRectangle:
+					radius: [23]
+					pos: self.pos
+					size: self.size
+			canvas.before:
+				Color:
+					rgba: background_txt
+				RoundedRectangle:
+					radius: [23]
+					pos: self.pos
+					size: (530, 81.3)
+			background_normal: 'drawable/none.png'
+			background_down: 'drawable/none.png'
+			pos_hint: {'center_x': .5, 'center_y': chckpwd_y}
+			size: (528.7, 80)
+			size_hint: None, None
+
+		TextInput:
+			id: chckpwd_id
+			write_tab: False
+			multiline: False
+			background_normal: ""
+			background_active: ""
+			size_hint: None, None
+			size: (528.7, 83)
+			pos_hint: {'center_x': .5, 'center_y': chckpwd_y}
+			#font setting
+			hint_text:'搜尋...'
+			hint_text_color: home_searchtxt_color
+			font_size: 22
+			font_name: font_regular
+			padding: [40, self.height / 2.0 - (self.line_height / 2.0) * len(self._lines), 0, 0]
+			background_color: 0,0,0,0
+			#on_text:	
+
+		Image:
+			source: "drawable/home_pg/search_icon.png"
+			pos_hint: {'center_x':.85, 'center_y':chckpwd_y}
+			allow_stretch: False
+			size_hint_x: 0.07
+
+# hone page func btn --------------------------------------------------------
+
+		#:set first_row .28 
+		#:set second_row .72
+		#:set first_col .685
+		#:set second_col .5
+		#:set third_col .4
+		Image:
+			source: "drawable/home_pg/petgrooming_btn.png"
+			pos_hint: {'center_x': first_row, 'center_y': first_col}
+			allow_stretch: False
+			size_hint_x: 0.4
+
+		Image:
+			source: "drawable/home_pg/pethotel_btn.png"
+			pos_hint: {'center_x': second_row, 'center_y': first_col-.004}
+			allow_stretch: False
+			size_hint_x: 0.4
+
+		Image:
+			source: "drawable/home_pg/petfriendlyrestaurant_btn.png"
+			pos_hint: {'center_x': first_row, 'center_y': second_col}
+			allow_stretch: False
+			size_hint_x: 0.4
+
+		Image:
+			source: "drawable/home_pg/petmedic_btn.png"
+			pos_hint: {'center_x': second_row, 'center_y': second_col}
+			allow_stretch: False
+			size_hint_x: 0.4
+
+
+

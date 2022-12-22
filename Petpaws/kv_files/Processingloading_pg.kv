@@ -1,0 +1,35 @@
+<Processingloading_pg>:
+	name: 'processingloading'
+	RelativeLayout:
+		canvas:
+			Color:
+				rgba: loading_color
+			Rectangle:
+				size: self.size
+				pos: self.pos
+	Image:
+		canvas:
+			Color:
+				rgba: 0, 0, 0, 
+		source: "drawable/loading_pg/loading_img.png"
+		pos_hint: {'center_x':.48, 'center_y':0.6}
+		allow_stretch: False
+		size_hint_x: 0.6
+
+	Label:
+		pos_hint: {'center_x':.5, 'center_y': .45}
+		markup: True
+		text: "Loading..."
+		font_size: 35
+		font_name: font_bold
+		color: btn_upperleft
+
+	Image:
+		canvas:
+			Color:
+				rgba: 0, 0, 0, 
+		source: "drawable/processingloading_pg/bar.png"
+		pos_hint: {'center_x':.5, 'center_y':0.4}
+		allow_stretch: False
+		size_hint_x: 1
+

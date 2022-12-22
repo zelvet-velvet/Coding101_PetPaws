@@ -1,0 +1,67 @@
+<Chattingroom_pg>:
+	name: 'chattingroom'
+	RelativeLayout:
+		canvas:
+			Color:
+				rgba: input_background
+			Rectangle:
+				size: self.size
+				pos: self.pos
+
+# top bar btn ------------------------------------------------------------	
+		Label:
+			canvas:
+				Color:
+					rgba: loading_color
+				Rectangle: 
+					size: (642,screen_h*0.07)
+					pos: (0,screen_h*0.87)
+		Button:
+			background_normal: 'drawable/function_btn/back.png'
+			background_down: 'drawable/function_btn/back.png'
+			pos_hint: {'center_x':.11, 'center_y':.905}
+			allow_stretch: False
+			size: 60, 60
+			size_hint: None, None
+
+		Button:
+			background_normal: 'drawable/function_btn/three_dots.png'
+			background_down: 'drawable/function_btn/three_dots.png'
+			pos_hint: {'center_x':.89, 'center_y':.905}
+			allow_stretch: False
+			size: 10, 39
+			size_hint: None, None
+
+
+# image icon ------------------------------------------------------------
+		Image:
+			source: "drawable/function_btn/user.png"
+			pos_hint: {'center_x':.26, 'center_y':.905}	
+			allow_stretch: False
+			size_hint_x: 0.1
+			
+		Image:
+			source: "drawable/function_btn/online.png"
+			pos_hint: {'center_x':.295, 'center_y':.89}	
+			allow_stretch: False
+			size_hint_x: .03
+
+# upper left txt --------------------------------------------------------
+		Label:
+			pos_hint: {'center_x':.41, 'center_y': .915}
+			markup: True
+			text: "盟寵小舖"
+			font_size: 25
+			font_name: font_bold
+			color: btn_upperleft
+	
+		Label:
+			pos_hint: {'center_x':.41, 'center_y': .893}
+			markup: True
+			text: "19分鐘前上線"
+			font_size: 15
+			font_name: font_regular
+			color: btn_upperleft
+
+
+

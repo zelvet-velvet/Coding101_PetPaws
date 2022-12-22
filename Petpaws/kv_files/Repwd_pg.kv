@@ -1,27 +1,169 @@
-<Howtorepwd_pg>:
-	name: 'howtorepwd'
+<Repwd_pg>:
+	name: 'repwd'
 	RelativeLayout:
 		canvas:
 			Color:
-				rgba: howtorepwd_color
+				rgba: repwd_color
 			Rectangle:
 				size: self.size
 				pos: self.pos
-		Label:
-			pos_hint: {'center_x':.5, 'center_y':.88}
-			markup: True
-			text: "忘記密碼"
-			font_size: 55
-			font_name: font_bold
+
+		Button:
+			canvas.before:
+				Color:
+					rgba: 1, 1, 1, 1
+				RoundedRectangle:
+					radius: [10]
+					pos: self.pos
+					size: self.size
+			background_normal: 'drawable/none.png'
+			background_down: 'drawable/none.png'
+			text: '新密碼'
 			color: btn_upperleft
+			font_size: 58
+			font_name: font_bold
+			size_hint: None, None
+			size: (160, 60)
+			pos_hint: {'center_x':.315, 'center_y':.9}
+	
+		Button:
+			background_normal: 'drawable/function_btn/back.png'
+			background_down: 'drawable/function_btn/back.png'
+			pos_hint: {'center_x':.11, 'center_y':.9}
+			allow_stretch: False
+			size: 60, 60
+			size_hint: None, None
 			
 		Label:
-			pos_hint: {'center_x':.5, 'center_y':.8}
+			pos_hint: {'center_x':.4, 'center_y':.825}
 			markup: True
-			text: "    選擇哪些聯繫方式應該，我們用來重置您的密碼："
-			font_size: 22
+			text: "您的新密碼必須\n與先前使用的密碼相異。"
+			font_size: 25
 			font_name: font_regular
 			color: btn_upperleft
+
+# input text password ------------------------------------------------------------
+	
+		#:set pwd_y .66	
+		Label:
+			pos_hint: {'center_x':.15, 'center_y':pwd_y+.06}
+			markup: True
+			text: "新密碼"
+			font_size: 23
+			font_name: font_regular
+			color: btn_upperleft
+
+		Label:
+			canvas:
+				Color:
+					rgba: input_background
+				RoundedRectangle:
+					radius: [23]
+					pos: self.pos
+					size: self.size
+			canvas.before:
+				Color:
+					rgba: background_txt
+				RoundedRectangle:
+					radius: [23]
+					pos: self.pos
+					size: (530, 106.3)
+			background_normal: 'drawable/none.png'
+			background_down: 'drawable/none.png'
+			pos_hint: {'center_x': .5, 'center_y': pwd_y}
+			size: (528.7, 105)
+			size_hint: None, None
+
+		TextInput:
+			id: repwd_id
+			write_tab: False
+			multiline: False
+			background_normal: ""
+			background_active: ""
+			size_hint: None, None
+			size: (528.7, 83)
+			pos_hint: {'center_x': .5, 'center_y': pwd_y}
+			#font setting
+			hint_text:'John Adam'
+			hint_text_color: background_txt
+			font_size: 25
+			font_name: font_regular
+			padding: [40, self.height / 2.0 - (self.line_height / 2.0) * len(self._lines), 0, 0]
+			background_color: 0,0,0,0
+			#on_text:	
+# input text chckpassword --------------------------------------------------------
+	
+		#:set chckpwd_y .535	
+		Label:
+			pos_hint: {'center_x':.17, 'center_y':chckpwd_y+.06}
+			markup: True
+			text: "確認密碼"
+			font_size: 23
+			font_name: font_regular
+			color: btn_upperleft
+
+		Label:
+			canvas:
+				Color:
+					rgba: input_background
+				RoundedRectangle:
+					radius: [23]
+					pos: self.pos
+					size: self.size
+			canvas.before:
+				Color:
+					rgba: background_txt
+				RoundedRectangle:
+					radius: [23]
+					pos: self.pos
+					size: (530, 106.3)
+			background_normal: 'drawable/none.png'
+			background_down: 'drawable/none.png'
+			pos_hint: {'center_x': .5, 'center_y': chckpwd_y}
+			size: (528.7, 105)
+			size_hint: None, None
+
+		TextInput:
+			id: chckpwd_id
+			write_tab: False
+			multiline: False
+			background_normal: ""
+			background_active: ""
+			size_hint: None, None
+			size: (528.7, 83)
+			pos_hint: {'center_x': .5, 'center_y': chckpwd_y}
+			#font setting
+			hint_text:'John Adam'
+			hint_text_color: background_txt
+			font_size: 25
+			font_name: font_regular
+			padding: [40, self.height / 2.0 - (self.line_height / 2.0) * len(self._lines), 0, 0]
+			background_color: 0,0,0,0
+			#on_text:	
+# button repwd ------------------------------------------------------------
+
+		Button:
+			id: repwd_btn
+			canvas.before:
+				Color:
+					rgba: btn_pink
+				RoundedRectangle:
+					radius: [20]
+					pos: self.pos
+					size: self.size
+			background_normal: 'drawable/none.png'
+			background_down: 'drawable/none.png'
+			size_hint: None, None
+			size: (528.7, 100)
+			pos_hint: {'center_x':.5, 'center_y':.375}
+
+		Label:
+			pos_hint: {'center_x':.5, 'center_y':.375}
+			markup: True
+			text: "修改"
+			font_size: 30
+			font_name: font_bold
+			color: 1, 1, 1, 1
 		
 			
 

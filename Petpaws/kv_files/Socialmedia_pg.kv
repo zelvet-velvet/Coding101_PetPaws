@@ -1,0 +1,135 @@
+<Socialmedia_pg>:
+	name: 'socialmedia'
+	RelativeLayout:
+		canvas:
+			Color:
+				rgba: socialmedia_color
+			Rectangle:
+				size: self.size
+				pos: self.pos
+
+		Label:
+			canvas:
+				Color:
+					rgba: input_background
+				Line:
+					width: 1.5
+					points: 0, screen_h*.89, screen_w, screen_h*.892
+
+# user name ----------------------------------------------------------	
+		Label:
+			id: username
+			pos_hint: {'center_x':.2, 'center_y':.69}
+			markup: True
+			text: "John Addam"
+			font_size: 30
+			font_name: font_bold
+			color: btn_upperleft
+
+# user image ----------------------------------------------------------	
+		# paws decorate
+		Image:
+			source: "drawable/socialmedia_pg/yellow_paw.png"
+			pos_hint: {'center_x':.37, 'center_y':.85}	
+			allow_stretch: False
+			size_hint_x: 0.18
+		
+		Image:
+			source: "drawable/socialmedia_pg/user_background.png"
+			pos_hint: {'center_x':.23, 'center_y':.79}	
+			allow_stretch: False
+			size_hint_x: 0.35
+		
+		Image:
+			id: user_image
+			source: "drawable/socialmedia_pg/user.png"
+			pos_hint: {'center_x':.23, 'center_y':.79}	
+			allow_stretch: False
+			size_hint_x: 0.2
+		
+		# paws decorate
+		Image:
+			source: "drawable/socialmedia_pg/purple_paw.png"
+			pos_hint: {'center_x':.1, 'center_y':.75}	
+			allow_stretch: False
+			size_hint_x: 0.18
+
+# menu btn ------------------------------------------------------------	
+		Button:
+			id: menu
+			background_normal: 'drawable/socialmedia_pg/menu.png'
+			background_down: 'drawable/socialmedia_pg/menu.png'
+			pos_hint: {'center_x':.1, 'center_y':.925}
+			allow_stretch: False
+			size: 50, 42
+			size_hint: None, None
+
+# scroll to top btn ---------------------------------------------------
+		Button:
+			id: scrolltop
+			background_normal: 'drawable/socialmedia_pg/title_txt.png'
+			background_down: 'drawable/socialmedia_pg/title_txt.png'
+			pos_hint: {'center_x':.5, 'center_y':.925}
+			allow_stretch: False
+			size: 250, 64
+			size_hint: None, None
+			
+# new post btn ---------------------------------------------------
+		Button:
+			id: newpost
+			background_normal: 'drawable/socialmedia_pg/newpost.png'
+			background_down: 'drawable/socialmedia_pg/newpost.png'
+			pos_hint: {'center_x':.87, 'center_y':.145}
+			allow_stretch: False
+			size: 100, 100
+			size_hint: None, None
+
+# bottom change screen btn --------------------------------------------
+		BoxLayout:
+			size_hint: None,None
+			pos_hint: {'center_x':.5, 'center_y': .036}
+			orientation: 'horizontal'
+			size: (self.parent.width, 100)
+			spacing: 100
+			padding: [90,0,0,0]
+			canvas:
+				Color:
+					rgba: btn_pink
+				Rectangle:
+					size: self.size
+					pos: self.pos
+	
+			Button:
+				background_normal: 'drawable/socialmedia_pg/home_btn.png'
+				background_down: 'drawable/socialmedia_pg/home_btn.png'
+				size: 40, 37
+				pos_hint: {'center_x':.5, 'center_y':0.5}
+				size_hint: None, None
+				on_release: 
+					app.root.current = 'profile'
+			Button:
+				background_normal: 'drawable/socialmedia_pg/function_btn.png'
+				background_down: 'drawable/socialmedia_pg/function_btn'
+				size: 40, 40
+				pos_hint: {'center_x':.5, 'center_y':0.5}
+				size_hint: None, None
+				on_release: 
+					app.root.current = 'drone'
+			Button:
+				background_normal: 'drawable/socialmedia_pg/notice_btn.png'
+				background_down: 'drawable/socialmedia_pg/notice_btn'
+				size: 40, 40
+				pos_hint: {'center_x':.5, 'center_y':0.5}
+				size_hint: None, None
+				on_release: app.root.current = 'list'
+			Button:
+				background_normal: 'drawable/socialmedia_pg/chat_btn.png'
+				background_down: 'drawable/socialmedia_pg/chat_btn'
+				size: 40, 40
+				pos_hint: {'center_x':.5, 'center_y':0.5}
+				size_hint: None, None
+				on_release: 
+					app.root.current = 'notification'
+
+
+
