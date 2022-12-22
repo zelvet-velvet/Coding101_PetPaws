@@ -1,6 +1,11 @@
-APP PetPaws develop for Coding101.
+# PetPaws
+# Introduction
 
-A glimpse of our APP's UI:
-
+# UI quickview
+> screenshot below is our APP's UI design
 ![Alt text](screenshot/guide.png)
+
+> home page and notice page
+![Alt text](screenshot/guide2.png)
+
 
