@@ -30,6 +30,10 @@ import time
 # app establishing import
 from kivy.app import App
 
+class Socialmedia_pg(Screen):
+	def __init__(self,  **kwargs):
+		super(Socialmedia_pg, self).__init__(**kwargs)
+
 class Loading_pg(Screen):
 	def __init__(self,  **kwargs):
 		super(Loading_pg, self).__init__(**kwargs)
@@ -50,10 +54,29 @@ class Howtorepwd_pg(Screen):
 	def __init__(self,  **kwargs):
 		super(Howtorepwd_pg, self).__init__(**kwargs)
 
+class Verifyrepwd_pg(Screen):
+	def __init__(self,  **kwargs):
+		super(Verifyrepwd_pg, self).__init__(**kwargs)
+
 class Repwd_pg(Screen):
 	def __init__(self,  **kwargs):
 		super(Repwd_pg, self).__init__(**kwargs)
 
+class Successrepwd_pg(Screen):
+	def __init__(self,  **kwargs):
+		super(Successrepwd_pg, self).__init__(**kwargs)
+
+class Processingloading_pg(Screen):
+	def __init__(self,  **kwargs):
+		super(Processingloading_pg, self).__init__(**kwargs)
+
+class Chattingroom_pg(Screen):
+	def __init__(self,  **kwargs):
+		super(Chattingroom_pg, self).__init__(**kwargs)
+
+class Home_pg(Screen):
+	def __init__(self, **kwargs):
+		super(Home_pg, self).__init__(**kwargs)	
 
 class ScreenManager(ScreenManager):
 	pass

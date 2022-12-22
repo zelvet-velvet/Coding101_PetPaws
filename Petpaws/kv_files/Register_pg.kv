@@ -34,8 +34,8 @@
 			allow_stretch: False
 			size: 60, 60
 			size_hint: None, None	
+
 # input text username ------------------------------------------------------------
-		
 		Label:
 			pos_hint: {'center_x':.15, 'center_y':.81}
 			markup: True
@@ -81,9 +81,9 @@
 			font_name: font_regular
 			padding: [40, self.height / 2.0 - (self.line_height / 2.0) * len(self._lines), 0, 0]
 			background_color: 0,0,0,0
-			#on_text:	
+			#on_text:
+	
 # input text mail ------------------------------------------------------------
-
 		Label:
 			pos_hint: {'center_x':.15, 'center_y':.68}
 			markup: True
@@ -130,8 +130,8 @@
 			padding: [40, self.height / 2.0 - (self.line_height / 2.0) * len(self._lines), 0, 0]
 			background_color: 0,0,0,0
 			#on_text: 
-# input text password ------------------------------------------------------------
 
+# input text password ------------------------------------------------------------
 		Label:
 			pos_hint: {'center_x':.15, 'center_y':.56}
 			markup: True
@@ -179,8 +179,8 @@
 			padding: [40, self.height / 2.0 - (self.line_height / 2.0) * len(self._lines), 0, 0]
 			background_color: 0,0,0,0
 			#on_text: 
-# button register ------------------------------------------------------------
 
+# button register ------------------------------------------------------------
 		Button:
 			id: register_btn
 			canvas.before:
@@ -201,7 +201,7 @@
 			markup: True
 			text: "註冊"
 			font_size: 30
-			font_name: font_regular
+			font_name: font_bold
 			color: 1, 1, 1, 1
 # split line  ------------------------------------------------------------
 		
@@ -224,8 +224,8 @@
 			font_size: 25
 			font_name: font_bold
 			color: btn_upperleft
-# register btn from outside app ------------------------------------------
-		
+
+# register btn from outside app ------------------------------------------		
 		#:set rbtn_y .185	
 		Button:
 			id: google_btn
@@ -271,8 +271,8 @@
 			size: (95, 95)
 			size_hint: None, None
 			pos_hint: {'center_x':.85, 'center_y':rbtn_y}
-# sign in text ------------------------------------------
 
+# sign in text ------------------------------------------
 		Label:
 			pos_hint: {'center_x':.4, 'center_y': .1}
 			markup: True
@@ -298,5 +298,6 @@
 			size_hint: None, None
 			size: (160, 60)
 			pos_hint: {'center_x':.7, 'center_y':.1}
+
 #  ------------------------------------------
 
