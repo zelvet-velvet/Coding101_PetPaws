@@ -6,7 +6,7 @@
 ![Alt text](screenshot/guide3.png)
 
 # Home page and Forum page
-> Users could 
+> 
 ![Alt text](screenshot/main.png)
 
 # Profile and Pet page
