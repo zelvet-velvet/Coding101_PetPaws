@@ -6,6 +6,6 @@
 ![Alt text](screenshot/guide3.png)
 
 > home page and notice page
-![Alt text](screenshot/guide2.png)
+![Alt text](screenshot/main.png)
 
 
