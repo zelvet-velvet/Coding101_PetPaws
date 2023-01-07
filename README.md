@@ -9,13 +9,21 @@
 > Users could 
 ![Alt text](screenshot/main.png)
 
-# Function and Notification page
+# Profile and Pet page
 
-![Alt text](screenshot/function.png)
+![Alt text](screenshot/profile.png)
 
 # Messenge page
 
 ![Alt text](screenshot/messenge.png)
+
+# Function and Notification page
+
+![Alt text](screenshot/function.png)
+
+# Diary page
+
+![Alt text](screenshot/diary.png)
 
 # Pet Home page
 
@@ -24,10 +32,6 @@
 ![Alt text](screenshot/pet_home2.png)
 
 ![Alt text](screenshot/pet_home3.png)
-
-# Diary page
-
-![Alt text](screenshot/diary.png)
 
 # Reservation page
 
@@ -41,9 +45,7 @@
 
 ![Alt text](screenshot/shop2.png)
 
-# Profile and Pet page
 
-![Alt text](screenshot/profile.png)
 
 # Set up page
 ![Alt text](screenshot/setup1.png)
