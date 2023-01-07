@@ -13,21 +13,31 @@
 
 ![Alt text](screenshot/function.png)
 
-# Pet Home page
-
-
-# Diary page
-
-
 # Messenge page
 
 ![Alt text](screenshot/messenge.png)
+
+# Pet Home page
+
+![Alt text](screenshot/pet_home1.png)
+
+![Alt text](screenshot/pet_home2.png)
+
+![Alt text](screenshot/pet_home3.png)
+
+# Diary page
+
+![Alt text](screenshot/diary.png)
+
+# Reservation page
+
+![Alt text](screenshot/reservation.png)
 
 # Shopping and Shopping Cart page
 
 ![Alt text](screenshot/shop1.png)
 
-# Store and Product page
+> Store and Product page
 
 ![Alt text](screenshot/shop2.png)
 
@@ -37,4 +47,5 @@
 
 # Set up page
 ![Alt text](screenshot/setup1.png)
+
 ![Alt text](screenshot/setup2.png)
