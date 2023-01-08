@@ -1,7 +1,7 @@
 # PetPaws
 # Introduction
 
-# UI quickview
+# UI glimpse
 > screenshot below is our APP's UI design
 ![Alt text](screenshot/guide.png)
 
