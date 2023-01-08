@@ -50,5 +50,5 @@ In order to provide a social software for pet lovers, due to the lack of integra
 # Set up page
 >You can set the index on Set up page, basic information, notifications, privacy settings,etc.
 ![Alt text](screenshot/setup1.png)
-
+>
 ![Alt text](screenshot/setup2.png)
