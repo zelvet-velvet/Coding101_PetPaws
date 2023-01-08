@@ -1,0 +1,49 @@
+<Chatentry_pg>:
+	name: 'chatentry'
+	RelativeLayout:
+		canvas:
+			Color:
+				rgba: chattingroom_color
+			Rectangle:
+				size: self.size
+				pos: self.pos
+
+		Button:
+			id: back
+			background_normal: 'drawable/function_btn/back.png'
+			background_down: 'drawable/function_btn/back.png'
+			pos_hint: {'center_x':.11, 'center_y':.905}
+			allow_stretch: False
+			size: 60, 60
+			size_hint: None, None
+			on_release:
+				app.root.current = 'home'
+	
+		Button:
+			canvas.before:
+				Color:
+					rgba: 1, 1, 1, 1
+				RoundedRectangle:
+					radius: [10]
+					pos: self.pos
+					size: self.size
+			background_normal: 'drawable/none.png'
+			background_down: 'drawable/none.png'
+			text: '聊天'
+			color: btn_upperleft
+			font_size: 55
+			font_name: font_bold
+			size_hint: None, None
+			size: (160, 60)
+			pos_hint: {'center_x':.3, 'center_y':.905}
+
+		Button:
+			background_normal: 'drawable/chattingroom/who.png'
+			background_down: 'drawable/chattingroom/who.png'
+			size_hint: None, None
+			size: 600, 569
+			pos_hint: {'center_x':.5, 'center_y':.6}
+			on_release:
+				app.root.current = 'chattingroom'
+
+

@@ -1,0 +1,75 @@
+<Onlineshop_pg>:
+	name: 'onlineshop'
+	RelativeLayout:
+		canvas:
+			Color:
+				rgba: onlineshop_color
+			Rectangle:
+				size: self.size
+				pos: self.pos
+
+		Button:
+			id: back
+			background_normal: 'drawable/function_btn/back.png'
+			background_down: 'drawable/function_btn/back.png'
+			pos_hint: {'center_x':.11, 'center_y':.905}
+			allow_stretch: False
+			size: 60, 60
+			size_hint: None, None
+			on_release:
+				app.root.current = 'home'
+
+		Button:
+			background_normal: 'drawable/onlineshop/shopbag_icon.png'
+			background_down: 'drawable/onlineshop/shopbag_icon.png'
+			pos_hint: {'center_x':.9, 'center_y':.905}
+			allow_stretch: False
+			size: 40, 45
+			size_hint: None, None
+			on_release:
+	
+		Button:
+			canvas.before:
+				Color:
+					rgba: 1, 1, 1, 1
+				RoundedRectangle:
+					radius: [10]
+					pos: self.pos
+					size: self.size
+			background_normal: 'drawable/none.png'
+			background_down: 'drawable/none.png'
+			text: '商城'
+			color: btn_upperleft
+			font_size: 55
+			font_name: font_bold
+			size_hint: None, None
+			size: (160, 60)
+			pos_hint: {'center_x':.3, 'center_y':.905}
+
+		Image:
+			source: "drawable/onlineshop/onlineshop_topbar.png"
+			pos_hint: {'center_x':.5, 'center_y':.765}
+			allow_stretch: False
+			size_hint_x: .85
+	
+		ScrollView:
+			id: follow_scroll
+			do_scroll_y: True
+			do_scroll_x: False
+			bar_width: 15
+			bar_color: 252/255, 199/255, 101/255, .7
+			scroll_wheel_distance: 50
+			size_hint: (.8, .67)
+			pos_hint: {'center_x': .48, 'center_y': .31}
+			RelativeLayout:
+				height: 1200
+				size_hint: 1, None
+				Image:
+					source: "drawable/onlineshop/onlineshop.png"
+					pos_hint: {'center_x':.5, 'center_y':.53}
+					allow_stretch: False
+					size_hint_x: .93
+
+
+
+	

@@ -1,0 +1,30 @@
+<Booking_pg>:
+	name: 'booking'
+	RelativeLayout:
+		canvas:
+			Color:
+				rgba: booking_color
+			Rectangle:
+				size: self.size
+				pos: self.pos
+
+		Image:
+			source: "drawable/booking/booking.png"
+			pos_hint: {'center_x':.5, 'center_y':.5}
+			allow_stretch: False
+			size_hint_x: 1
+
+		Button:
+			id: back
+			background_normal: 'drawable/function_btn/back.png'
+			background_down: 'drawable/function_btn/back.png'
+			pos_hint: {'center_x':.11, 'center_y':.905}
+			allow_stretch: False
+			size: 60, 60
+			size_hint: None, None
+			on_release:
+				app.root.current = 'home'
+
+
+
+
