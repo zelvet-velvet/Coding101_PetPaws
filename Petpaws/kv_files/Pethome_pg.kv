@@ -1,0 +1,244 @@
+<Pethome_pg>:
+	name: 'pethome'
+	RelativeLayout:
+		canvas:
+			Color:
+				rgba: pethome_color
+			Rectangle:
+				size: self.size
+				pos: self.pos
+# background image -------------------------------------------------------------
+		Image:
+			source: "drawable/pethome/background.png"
+			pos_hint: {'center_x':.495, 'center_y':.479}
+			allow_stretch: False
+			size_hint_x: 1
+
+# furniture -----------------------------------------------------------------
+		Image:
+			id: frame_img
+			source: "drawable/pethome/frame.png"
+			pos_hint: {'center_x':.8, 'center_y':.8}
+			allow_stretch: False
+			size_hint_x: 0
+
+		Image:
+			id: bed_img
+			source: "drawable/pethome/bed.png"
+			pos_hint: {'center_x':.75, 'center_y':.38}
+			allow_stretch: False
+			size_hint_x: 0
+
+		Image:
+			id: bookshelf_img
+			source: "drawable/pethome/bookshelf.png"
+			pos_hint: {'center_x':.33, 'center_y':.7}
+			allow_stretch: False
+			size_hint_x: .55
+
+		Image:
+			id: plant_img
+			source: "drawable/pethome/plant.png"
+			pos_hint: {'center_x':.495, 'center_y':.735}
+			allow_stretch: False
+			size_hint_x: 0
+
+		Image:
+			id: furniture_img
+			source: "drawable/pethome/furniture_bar.png"
+			pos_hint: {'center_x':.5, 'center_y':.08}
+			allow_stretch: False
+			size_hint_x: 0
+
+# btn of furniture toggle ---------------------------------------------------
+		Button:
+			id: bed_btn
+			background_normal: 'drawable/pethome/bed_btn.png'
+			background_down: 'drawable/pethome/bed_btn.png'
+			background_disabled_normal: 'drawable/none.png'
+			pos_hint: {'center_x':.22, 'center_y':.08}
+			allow_stretch: False
+			size: 150, 200
+			size_hint: None, None
+			disabled: True
+			on_release:
+				root.ids.bed_img.size_hint_x = 0 if root.ids.bed_img.size_hint_x else .4
+				root.ids.bed_btn.background_normal = 'drawable/pethome/bed_btn50.png' if  root.ids.bed_img.size_hint_x else 'drawable/pethome/bed_btn.png'
+
+		Button:
+			id: plant_btn
+			background_normal: 'drawable/pethome/plant_btn.png'
+			background_down: 'drawable/pethome/plant_btn.png'
+			background_disabled_normal: 'drawable/none.png'
+			pos_hint: {'center_x':.5, 'center_y':.08}
+			allow_stretch: False
+			size: 150, 200
+			size_hint: None, None
+			disabled: True
+			on_release:
+				root.ids.plant_img.size_hint_x = 0 if root.ids.plant_img.size_hint_x else .12
+				root.ids.plant_btn.background_normal = 'drawable/pethome/plant_btn50.png' if root.ids.plant_img.size_hint_x else 'drawable/pethome/plant_btn.png'
+				
+		Button:
+			id: frame_btn
+			background_normal: 'drawable/pethome/frame_btn.png'
+			background_down: 'drawable/pethome/frame_btn.png'
+			background_disabled_normal: 'drawable/none.png'
+			pos_hint: {'center_x':.78, 'center_y':.08}
+			allow_stretch: False
+			size: 150, 200
+			size_hint: None, None
+			disabled: True
+			on_release:
+				root.ids.frame_img.size_hint_x = 0 if root.ids.frame_img.size_hint_x else .15
+				root.ids.frame_btn.background_normal = 'drawable/pethome/frame_btn50.png' if root.ids.frame_img.size_hint_x else 'drawable/pethome/frame_btn.png'
+				
+# function btn -----------------------------------------------------------------
+		#:set y_value .6
+		Button:
+			id: back
+			background_normal: 'drawable/function_btn/back.png'
+			background_down: 'drawable/function_btn/back.png'
+			pos_hint: {'center_x':.11, 'center_y':.905}
+			allow_stretch: False
+			size: 60, 60
+			size_hint: None, None
+			on_release:
+				app.root.current = 'home'
+		
+		Button:
+			id: func_btn
+			background_normal: 'drawable/pethome/func_btn.png'
+			background_down: 'drawable/pethome/func_btn.png'
+			pos_hint: {'center_x':.89, 'center_y':y_value-.3}
+			allow_stretch: False
+			size: 60, 60
+			size_hint: None, None
+			on_release:
+				root.ids.manage.disabled = True if not root.ids.manage.disabled  else False
+				root.ids.cloth.disabled = True if not root.ids.cloth.disabled  else False
+				root.ids.func_shop.disabled = True if not root.ids.func_shop.disabled  else False
+				root.ids.furniture.disabled = True if not root.ids.furniture.disabled  else False
+				root.ids.interact.disabled = True if not root.ids.interact.disabled else False
+	
+		Button:
+			id: manage
+			background_normal: 'drawable/pethome/manage.png'
+			background_down: 'drawable/pethome/manage.png'
+			background_disabled_normal: 'drawable/none.png'
+			pos_hint: {'center_x':.89, 'center_y':y_value+.25}
+			allow_stretch: False
+			size: 100, 135
+			size_hint: None, None
+			disabled: True
+			on_release:
+
+		Button:
+			id: func_shop
+			background_normal: 'drawable/pethome/shop.png'
+			background_down: 'drawable/pethome/shop.png'
+			background_disabled_normal: 'drawable/none.png'
+			pos_hint: {'center_x':.89, 'center_y':y_value+.15}
+			allow_stretch: False
+			size: 100, 135
+			size_hint: None, None
+			disabled: True
+			on_release:
+				root.ids.manage.disabled = False
+
+		Button:
+			id: furniture
+			background_normal: 'drawable/pethome/furniture.png'
+			background_down: 'drawable/pethome/furniture.png'
+			background_disabled_normal: 'drawable/none.png'
+			pos_hint: {'center_x':.89, 'center_y':y_value+.05}
+			allow_stretch: False
+			size: 100, 135
+			size_hint: None, None
+			disabled: True
+			on_release:
+				root.ids.bed_btn.disabled = False if root.ids.bed_btn.disabled  else True
+				root.ids.plant_btn.disabled = False if root.ids.plant_btn.disabled  else True
+				root.ids.frame_btn.disabled = False if root.ids.frame_btn.disabled  else True
+				root.ids.furniture_img.size_hint_x = 0 if root.ids.furniture_img.size_hint_x  else 1
+
+
+		Button:
+			id: cloth
+			background_normal: 'drawable/pethome/cloth.png'
+			background_down: 'drawable/pethome/cloth.png'
+			background_disabled_normal: 'drawable/none.png'
+			pos_hint: {'center_x':.89, 'center_y':y_value-.05}
+			allow_stretch: False
+			size: 100, 135
+			size_hint: None, None
+			disabled: True
+			on_release:
+				root.ids.suggest.background_down = 'drawable/none.png'	
+
+		Button:
+			id: interact
+			background_normal: 'drawable/pethome/interaction.png'
+			background_down: 'drawable/pethome/interaction.png'
+			background_disabled_normal: 'drawable/none.png'
+			pos_hint: {'center_x':.89, 'center_y':y_value-.15}
+			allow_stretch: False
+			size: 100, 135
+			size_hint: None, None
+			disabled: True
+			on_release:
+				root.ids.suggest.background_down = 'drawable/none.png'
+
+# pets ----------------------------------------------------------------------
+		Button:
+			background_normal: "drawable/pethome/shiba_inu.png"
+			background_down: "drawable/pethome/shiba_inu.png"
+			pos_hint: {'center_x':.755, 'center_y':.44}
+			allow_stretch: False
+			size: 150, 269
+			size_hint: None, None
+			on_release:
+				root.ids.shiba_inu_heart.size_hint_x = .05 if not root.ids.shiba_inu_heart.size_hint_x else 0
+					
+		Button:
+			background_normal:  "drawable/pethome/husky.png"
+			background_down:  "drawable/pethome/husky.png"
+			pos_hint: {'center_x':.4, 'center_y':.28}
+			allow_stretch: False
+			size: 500, 264
+			size_hint: None, None
+			on_release:
+				root.ids.husky_heart.size_hint_x = .05 if not root.ids.husky_heart.size_hint_x else 0
+		Button:
+			background_normal:  "drawable/pethome/cat.png"
+			background_down:  "drawable/pethome/cat.png"
+			pos_hint: {'center_x':.25, 'center_y':.765}
+			allow_stretch: False
+			size: 200, 200
+			size_hint: None, None
+			on_release:
+				root.ids.cat_heart.size_hint_x = .05 if not root.ids.cat_heart.size_hint_x else 0
+	# pets' reaction -------------------------------------------------------
+
+		Image:
+			id: cat_heart
+			source: "drawable/pethome/heart.png"
+			pos_hint: {'center_x':.14, 'center_y':.865}
+			allow_stretch: False
+			size_hint_x: 0
+
+		Image:
+			id: shiba_inu_heart
+			source: "drawable/pethome/heart.png"
+			pos_hint: {'center_x':.77, 'center_y':.55}
+			allow_stretch: False
+			size_hint_x: 0
+
+		Image:
+			id: husky_heart
+			source: "drawable/pethome/heart.png"
+			pos_hint: {'center_x':.64, 'center_y':.4}
+			allow_stretch: False
+			size_hint_x: 0
+
+

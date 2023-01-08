@@ -1,0 +1,94 @@
+<Notification>:
+	name: 'notification'
+	RelativeLayout:
+		canvas:
+			Color:
+				rgba: notification_color
+			Rectangle:
+				size: self.size
+				pos: self.pos
+
+		Button:
+			id: back
+			background_normal: 'drawable/function_btn/back.png'
+			background_down: 'drawable/function_btn/back.png'
+			pos_hint: {'center_x':.11, 'center_y':.905}
+			allow_stretch: False
+			size: 60, 60
+			size_hint: None, None
+			on_release:
+				app.root.current = 'socialmedia'
+
+		Button:
+			canvas.before:
+				Color:
+					rgba: 1, 1, 1, 1
+				RoundedRectangle:
+					radius: [10]
+					pos: self.pos
+					size: self.size
+			background_normal: 'drawable/none.png'
+			background_down: 'drawable/none.png'
+			text: '通知'
+			color: btn_upperleft
+			font_size: 55
+			font_name: font_bold
+			size_hint: None, None
+			size: (160, 60)
+			pos_hint: {'center_x':.3, 'center_y':.905}
+
+		Image:
+			source: "drawable/notification/notification.png"
+			pos_hint: {'center_x':.5, 'center_y':.5}
+			allow_stretch: False
+			size_hint_x: 1
+
+# bottom change screen btn --------------------------------------------
+		BoxLayout:
+			size_hint: None,None
+			pos_hint: {'center_x':.5, 'center_y': .036}
+			orientation: 'horizontal'
+			size: (self.parent.width, 100)
+			spacing: 100
+			padding: [90,0,0,0]
+			canvas:
+				Color:
+					rgba: btn_pink
+				Rectangle:
+					size: self.size
+					pos: self.pos
+	
+			Button:
+				background_normal: 'drawable/socialmedia_pg/home_btn.png'
+				background_down: 'drawable/socialmedia_pg/home_btn.png'
+				size: 40, 37
+				pos_hint: {'center_x':.5, 'center_y':0.5}
+				size_hint: None, None
+				on_release: 
+					app.root.current = 'socialmedia'
+			Button:
+				background_normal: 'drawable/socialmedia_pg/function_btn.png'
+				background_down: 'drawable/socialmedia_pg/function_btn.png'
+				size: 40, 40
+				pos_hint: {'center_x':.5, 'center_y':0.5}
+				size_hint: None, None
+				on_release: 
+					app.root.current = 'home'
+			Button:
+				background_normal: 'drawable/socialmedia_pg/notice_btn.png'
+				background_down: 'drawable/socialmedia_pg/notice_btn.png'
+				size: 40, 40
+				pos_hint: {'center_x':.5, 'center_y':0.5}
+				size_hint: None, None
+				on_release: 
+					app.root.current = 'notification'
+			Button:
+				background_normal: 'drawable/socialmedia_pg/chat_btn.png'
+				background_down: 'drawable/socialmedia_pg/chat_btn.png'
+				size: 40, 40
+				pos_hint: {'center_x':.5, 'center_y':0.5}
+				size_hint: None, None
+				on_release: 
+					app.root.current = 'chatentry'
+
+	

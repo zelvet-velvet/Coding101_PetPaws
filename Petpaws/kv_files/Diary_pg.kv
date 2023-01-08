@@ -1,0 +1,74 @@
+<Diary_pg>:
+	name: 'diary'
+	RelativeLayout:
+		canvas:
+			Color:
+				rgba: diary_color
+			Rectangle:
+				size: self.size
+				pos: self.pos
+
+		Button:
+			id: back
+			background_normal: 'drawable/function_btn/back.png'
+			background_down: 'drawable/function_btn/back.png'
+			pos_hint: {'center_x':.11, 'center_y':.905}
+			allow_stretch: False
+			size: 60, 60
+			size_hint: None, None
+			on_release:
+				app.root.current = 'home'
+	
+		Button:
+			canvas.before:
+				Color:
+					rgba: 1, 1, 1, 1
+				RoundedRectangle:
+					radius: [10]
+					pos: self.pos
+					size: self.size
+			background_normal: 'drawable/none.png'
+			background_down: 'drawable/none.png'
+			text: '日記'
+			color: btn_upperleft
+			font_size: 55
+			font_name: font_bold
+			size_hint: None, None
+			size: (160, 60)
+			pos_hint: {'center_x':.3, 'center_y':.905}
+
+		Button:
+			id: diary_btn
+			background_normal: 'drawable/diary/diary.png'
+			background_down: 'drawable/diary/diary.png'
+			background_disabled_normal: 'drawable/none.png'
+			pos_hint: {'center_x':.5, 'center_y':.7}
+			allow_stretch: False
+			size: 600, 311
+			size_hint: None, None
+			on_release:
+				root.ids.diary_pg.size_hint_x = .8
+				root.ids.diary_btn.disabled = True
+				root.ids.newpost.disabled = True
+
+		Image:
+			id: diary_pg
+			source: "drawable/diary/diary_pg.png"
+			pos_hint: {'center_x':.5, 'center_y':.45}
+			allow_stretch: False
+			size_hint_x: 0
+
+# new post btn ---------------------------------------------------
+		Button:
+			id: newpost
+			background_normal: 'drawable/diary/newpost.png'
+			background_down: 'drawable/diary/newpost.png'
+			background_disabled_normal: 'drawable/none.png'
+			pos_hint: {'center_x':.87, 'center_y':.145}
+			allow_stretch: False
+			size: 100, 100
+			size_hint: None, None
+
+
+
+	
