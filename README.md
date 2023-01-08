@@ -50,7 +50,7 @@
 
 
 # Set up page
->You can can set the index on Set up page, basic information, notifications, privacy settings, etc.
+>You can can set the index on Set up page, basic information, notifications, privacy settings,etc.
 ![Alt text](screenshot/setup1.png)
 
 ![Alt text](screenshot/setup2.png)
