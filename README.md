@@ -2,6 +2,7 @@
 > In order to provide a social software for pet lovers, due to the lack of integrated support for pet community functions on the platform.We designed a set that can help pet lovers and improve the existing community functions to promote the issue of stray animals. For the purpose of advocating correct pet knowledge, at the same time referring to the 17 sustainable development goals of the United Nations, solving the problem of stray animals, and helping to promote the 15th "Terrestrial Ecology".
 # Introduction
 > Screenshot below is our APP's UI design.
+> 
 # Sign in and Sign up page
 >PetPaws has a loading screen and multiple ways to register an account.
 ![Alt text](screenshot/guide3.png)
